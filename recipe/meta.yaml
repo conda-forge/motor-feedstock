@@ -11,22 +11,22 @@ source:
   sha256: "{{ sha256 }}"
 
 build:
-  number: 1000
-  skip: True  # [win or py<27 or py>=37]
+  number: 1001
+  skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
   host:
     - pip
     - aiohttp
-    - tornado
-    - pymongo >=3.4,<4
-    - python >=2.7,<3.7
+    - tornado >=4.0
+    - pymongo >=3.7
+    - python =2.7|>=3.5.2
   run:
-    - pymongo >=3.4,<4
+    - pymongo >=3.7
     - aiohttp
-    - tornado
-    - python >=2.7,<3.7
+    - tornado >=4.0
+    - python =2.7|>=3.5.2
 
 test:
   imports:
