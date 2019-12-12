@@ -1,6 +1,6 @@
 {% set name = "motor" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "d035c09ab422bc50bf3efb134f7405694cae76268545bd21e14fb22e2638f84e" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "756c587985d166166e644ccd36fb8b586fb987eb42fc0fc60cce9a3d76d809b4" %}
 
 package:
   name: "{{ name|lower }}"
@@ -11,7 +11,7 @@ source:
   sha256: "{{ sha256 }}"
 
 build:
-  number: 1001
+  number: 0
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
