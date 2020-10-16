@@ -1,19 +1,19 @@
 {% set name = "motor" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "d035c09ab422bc50bf3efb134f7405694cae76268545bd21e14fb22e2638f84e" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "f1692b760d834707e3477996ce8d407af8cd61c1a2abedbf81c22ef14675e61a" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "{{ sha256 }}"
+  sha256: {{ sha256 }}
 
 build:
-  number: 1002
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  number: 0
+  skip: true  # [win]
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
 
 requirements:
   host:
