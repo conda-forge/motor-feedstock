@@ -11,7 +11,7 @@ source:
   sha256: "{{ sha256 }}"
 
 build:
-  number: 1002
+  number: 1003
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
