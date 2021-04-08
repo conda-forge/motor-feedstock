@@ -1,6 +1,6 @@
 {% set name = "motor" %}
-{% set version = "2.3.0" %}
-{% set sha256 = "f1692b760d834707e3477996ce8d407af8cd61c1a2abedbf81c22ef14675e61a" %}
+{% set version = "2.4.0" %}
+{% set sha256 = "1196db507142ef8f00d953efa2f37b39335ef2d72af6ce4fbccfd870b65c5e9f" %}
 
 package:
   name: {{ name|lower }}
