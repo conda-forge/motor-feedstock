@@ -20,12 +20,12 @@ requirements:
     - pip
     - aiohttp
     - tornado >=5.0
-    - pymongo >=3.11
+    - pymongo >=3.11,<4
     - python >=3.5.2
   run:
     - aiohttp
     - tornado >=5.0
-    - pymongo >=3.11
+    - pymongo >=3.11,<4
     - python >=3.5.2
 
 test:
@@ -48,3 +48,5 @@ about:
 extra:
   recipe-maintainers:
     - hodgsonw
+    - ShaneHarvey
+    - blink1073
