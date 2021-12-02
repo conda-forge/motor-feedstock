@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
@@ -20,12 +20,12 @@ requirements:
     - pip
     - aiohttp
     - tornado >=5.0
-    - pymongo >=3.11
+    - pymongo >=3.11,<4
     - python >=3.5.2
   run:
     - aiohttp
     - tornado >=5.0
-    - pymongo >=3.11
+    - pymongo >=3.11,<4
     - python >=3.5.2
 
 test:
@@ -47,5 +47,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - hodgsonw
+    - ShaneHarvey
     - blink1073
     - hodgsonw
