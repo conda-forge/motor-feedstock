@@ -20,12 +20,12 @@ requirements:
     - pip
     - aiohttp
     - tornado >=6.0
-    - pymongo >=4.1,<5
+    - pymongo >=4.5,<5
     - python >=3.7
   run:
     - aiohttp
     - tornado >=6.0
-    - pymongo >=4.4,<5
+    - pymongo >=4.5,<5
     - python >=3.7
 
 test:
@@ -34,10 +34,11 @@ test:
   files:
     - run_the_tests.sh
   requires:
-    - mongodb     # [not win]
-    - setuptools  # [not win]
+    - mongodb 
+    - setuptools
     - pytest
     - mockupdb
+    - pymongo >=4.5,<5
     - pip
   imports:
     - motor
@@ -46,7 +47,7 @@ test:
     - motor.frameworks.asyncio
     - motor.frameworks.tornado
   commands:
-    - bash run_the_tests.sh  # [unix and not (ppc64le or python_impl=='pypy')]
+    - bash run_the_tests.sh
     - pip check
 
 about:
