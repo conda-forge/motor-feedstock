@@ -29,12 +29,25 @@ requirements:
     - python >=3.7
 
 test:
+  source_files:
+    - .
+  files:
+    - run_the_tests.sh
+  requires:
+    - mongodb     # [not win]
+    - setuptools  # [not win]
+    - pytest
+    - mockupdb
+    - pip
   imports:
     - motor
     - motor.aiohttp
     - motor.frameworks
     - motor.frameworks.asyncio
     - motor.frameworks.tornado
+  commands:
+    - bash run_the_tests.sh  # [unix and not (ppc64le or python_impl=='pypy')]
+    - pip check
 
 about:
   home: https://github.com/mongodb/motor/
