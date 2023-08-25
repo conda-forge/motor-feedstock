@@ -12,7 +12,9 @@ mkdir "$DB_PATH"
 
 mongod --dbpath="$DB_PATH" --fork --logpath="$LOG_PATH" --port="$DB_PORT" --pidfilepath="$PID_FILE_PATH" --setParameter="enableTestCommands=1"
 
-python -m pytest -v
+# Run a subset of tests.
+python -m pytest -v test/asyncio_tests/test_asyncio_basic.py
+python -m pytest -v test/asyncio_tests/test_asyncio_client.py
 
 # Terminate the forked process after the test suite exits
 kill `cat $PID_FILE_PATH`

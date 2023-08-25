@@ -39,7 +39,6 @@ test:
     - pytest
     - mockupdb
     - pymongo >=4.5,<5
-    - pymongocrypt
     - pip
   imports:
     - motor
