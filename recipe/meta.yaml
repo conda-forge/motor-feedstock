@@ -1,6 +1,6 @@
 {% set name = "motor" %}
-{% set version = "3.2.0" %}
-{% set sha256 = "4fb1e8502260f853554f24115421584e83904a6debb577354d33e9711ee99008" %}
+{% set version = "3.3.0" %}
+{% set sha256 = "f18b90089acf914e21485d002c116f27a2215c85174b3bd3e2221d633e8cf7ab" %}
 
 package:
   name: {{ name|lower }}
@@ -20,21 +20,35 @@ requirements:
     - pip
     - aiohttp
     - tornado >=6.0
-    - pymongo >=4.1,<5
+    - pymongo >=4.5,<5
     - python >=3.7
   run:
     - aiohttp
     - tornado >=6.0
-    - pymongo >=4.4,<5
+    - pymongo >=4.5,<5
     - python >=3.7
 
 test:
+  source_files:
+    - .
+  files:
+    - run_the_tests.sh
+  requires:
+    - mongodb 
+    - setuptools
+    - pytest
+    - mockupdb
+    - pymongo >=4.5,<5
+    - pip
   imports:
     - motor
     - motor.aiohttp
     - motor.frameworks
     - motor.frameworks.asyncio
     - motor.frameworks.tornado
+  commands:
+    - bash run_the_tests.sh
+    - pip check
 
 about:
   home: https://github.com/mongodb/motor/
