@@ -1,6 +1,6 @@
 {% set name = "motor" %}
-{% set version = "3.3.0" %}
-{% set sha256 = "f18b90089acf914e21485d002c116f27a2215c85174b3bd3e2221d633e8cf7ab" %}
+{% set version = "3.3.1" %}
+{% set sha256 = "c5eb400e27d722a3db03a9826656b6d13acf9b6c70c2fb4604f474eac9da5be4" %}
 
 package:
   name: {{ name|lower }}
@@ -34,7 +34,7 @@ test:
   files:
     - run_the_tests.sh
   requires:
-    - mongodb 
+    - mongodb
     - setuptools
     - pytest
     - mockupdb
