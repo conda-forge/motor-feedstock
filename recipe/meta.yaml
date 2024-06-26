@@ -16,6 +16,9 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
+  build:
+    - hatchling >=1.24
+    - hatch-requirements-txt> =0.4.1
   host:
     - pip
     - aiohttp
