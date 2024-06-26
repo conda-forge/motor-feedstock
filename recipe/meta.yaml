@@ -18,7 +18,7 @@ build:
 requirements:
   build:
     - hatchling >=1.24
-    - hatch-requirements-txt> =0.4.1
+    - hatch-requirements-txt >=0.4.1
   host:
     - pip
     - aiohttp
