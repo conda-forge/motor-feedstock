@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
 
 requirements:
   build:
