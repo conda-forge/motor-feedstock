@@ -23,13 +23,13 @@ requirements:
     - hatchling >=1.24
     - hatch-requirements-txt >=0.4.1
     - tornado >=6.0
-    - pymongo >=4.5,<5
-    - python >=3.7
+    - pymongo >=4.9,<4.10
+    - python >=3.8
   run:
     - aiohttp
     - tornado >=6.0
-    - pymongo >=4.5,<5
-    - python >=3.7
+    - pymongo >=4.9,<4.10
+    - python >=3.8
 
 test:
   source_files:
@@ -41,7 +41,7 @@ test:
     - setuptools
     - pytest
     - mockupdb
-    - pymongo >=4.5,<5
+    - pymongo >=4.9,<4.10
     - pip
   imports:
     - motor
