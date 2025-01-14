@@ -1,6 +1,6 @@
 {% set name = "motor" %}
-{% set version = "3.6.0" %}
-{% set sha256 = "0ef7f520213e852bf0eac306adf631aabe849227d8aec900a2612512fb9c5b8d" %}
+{% set version = "3.6.1" %}
+{% set sha256 = "ee2b18386292f9ceb3cc8279a4cd34e4c641c5ac8de3500c30374081c76a9d03" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-cache-dir --no-build-isolation
