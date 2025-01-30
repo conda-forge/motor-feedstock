@@ -1,6 +1,6 @@
 {% set name = "motor" %}
-{% set version = "3.6.1" %}
-{% set sha256 = "ee2b18386292f9ceb3cc8279a4cd34e4c641c5ac8de3500c30374081c76a9d03" %}
+{% set version = "3.7.0" %}
+{% set sha256 = "0dfa1f12c812bd90819c519b78bed626b5a9dbb29bba079ccff2bfa8627e0fec" %}
 
 package:
   name: {{ name|lower }}
@@ -23,12 +23,12 @@ requirements:
     - hatchling >=1.24
     - hatch-requirements-txt >=0.4.1
     - tornado >=6.0
-    - pymongo >=4.9,<4.10
+    - pymongo >=4.9,<5
     - python {{ python_min }}
   run:
     - aiohttp
     - tornado >=6.0
-    - pymongo >=4.9,<4.10
+    - pymongo >=4.9,<5
     - python >={{ python_min }}
 
 test:
@@ -41,7 +41,7 @@ test:
     - setuptools
     - pytest
     - mockupdb
-    - pymongo >=4.9,<4.10
+    - pymongo >=4.9,<5
     - pip
     - python {{ python_min }}
   imports:
